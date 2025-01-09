@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
     <h2>{{ page_title }}</h2>
     <p>
         The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest
@@ -13,203 +14,24 @@
         on other business, welcomed a fourteenth to fill into their party.
     </p>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Thorin Oakenshield</h3>
-            <p>
-                Thorin, born in TA 2746, was the heir to the throne of Erebor. After Smaug drove his people into exile
-                in TA 2770, Thorin became a fierce warrior, earning his epithet "Oakenshield" in the Battle of
-                Azanulbizar (TA 2799). He led Thorin's Company to reclaim the Lonely Mountain and its treasure. Thorin's
-                resolve was tested by the Arkenstone, and he ultimately perished in the Battle of Five Armies defending
-                Erebor with honor.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/ec/1400193_695248260488487_320403599_o.jpg" alt="Thorin Oakenshield Character Image">
-        </div>
-    </div>
+    <hr>
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/a/a1/BOTFA_-_Fili_and_Kili.jpg" alt="Fili & Kili Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Fili and Kili</h3>
-            <p>
-                Fíli and Kíli, Thorin's nephews, joined him in reclaiming Erebor. Known for their sharp eyes, they found
-                the Front Porch and scouted Ravenhill. They defended Thorin with their lives in the Battle of Five
-                Armies, where both fell with honor. Their loyalty and courage made them memorable among Thorin's
-                Company.
-            </p>
-        </div>
-    </div>
+    {% for member in company %}
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Óin</h3>
-            <p>
-                Óin, skilled with fire-making, fought at Azanulbizar before joining Thorin's quest. Wearing a brown
-                hood, he played a vital role in the journey, preparing campfires and enduring many trials. He survived
-                the Battle of Five Armies and later settled in Erebor under King Dáin II.
-            </p>
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h3>{{ member.name }}</h3>
+                <p>
+                    {{ member.description }}
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="Thorin's Company Member" class="featurette-image image-responsive">
+            </div>
         </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/e8/Oin.jpg" alt="Óin Character Image">
-        </div>
-    </div>
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/f/fc/Gloin_2.jpg" alt="Glóin Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Glóin</h3>
-            <p>
-                Glóin, born in TA 2783, fought in Azanulbizar and later joined Thorin's quest with his brother Óin.
-                Known for his fire-starting skills, Glóin survived the Battle of Five Armies. He settled in Erebor,
-                where his son Gimli was born and later became a key figure in the War of the Ring.
-            </p>
-        </div>
-    </div>
+        <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Balin</h3>
-            <p>
-                Balin, a respected elder, fought at Azanulbizar and accompanied Thráin on a failed attempt to reclaim
-                Erebor. In TA 2941, he joined Thorin's Company and played music at Bag End. Balin survived the Battle of
-                Five Armies and lived under King Dáin II at Erebor.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/e1/Balin_AUJ.jpg" alt="Balin Character Image">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/1/1c/Dwalin.jpg" alt="Dwalin Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Dwalin</h3>
-            <p>
-                Dwalin, a loyal warrior, fought at Azanulbizar and joined Thráin’s ill-fated expedition. In TA 2941, he
-                became the first dwarf to arrive at Bag End, wearing a green hood. Dwalin survived the Battle of Five
-                Armies and settled in Erebor, sharing in its riches.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Ori</h3>
-            <p>
-                Ori, a scribe and warrior, joined Thorin's Company in TA 2941. He survived trials with Goblins, Trolls,
-                and Smaug before fighting in the Battle of Five Armies. Ori later made his home in Erebor under King
-                Dáin II Ironfoot, living in prosperity.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/8/81/Ori.jpeg" alt="Ori Character Image">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/2/27/Mark_Hadlow_as_Dori.jpg" alt="Dori Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Dori</h3>
-            <p>
-                Dori, protective and strong, was known for carrying Bilbo in the Misty Mountains. A skilled flutist, he
-                joined Thorin's quest in TA 2941. Dori survived the Battle of Five Armies and later lived in Erebor
-                under Dáin II, enjoying its wealth.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Nori</h3>
-            <p>
-                Nori, an adventurous dwarf, joined Thorin's Company in TA 2941 alongside his brothers Dori and Ori.
-                Known for his flute-playing, he faced Goblins, Trolls, and Smaug. Nori fought at the Battle of Five
-                Armies and settled in Erebor under King Dáin II.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/5/50/Untitled-31.png" alt="Nori Character Image">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/7/73/Bifur_2.jpg" alt="Bifur Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Bifur</h3>
-            <p>
-                Bifur, descended from Khazad-dûm dwarves, was a clarinet-playing warrior in Thorin's Company. Despite
-                his injuries, he endured the quest's dangers and fought valiantly at the Battle of Five Armies. He later
-                retired to Erebor under Dáin II Ironfoot.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Bofur</h3>
-            <p>
-                Bofur, Bifur’s cousin, joined Thorin’s quest to reclaim Erebor. Known for his jovial spirit, he endured
-                many trials on the journey. Bofur fought in the Battle of Five Armies and lived a prosperous life in
-                Erebor under King Dáin II.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/5/56/Bofur_Nesbitt.jpg" alt="Bofur Character Image">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/ed/Bombur.jpg" alt="Bombur Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Bombur</h3>
-            <p>
-                Bombur, brother of Bofur, was known for his size and appetite. He joined Thorin’s quest and survived
-                Goblins, Trolls, and Smaug. Bombur fought in the Battle of Five Armies and lived in Erebor, sharing in
-                its treasure and peace.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Gandalf</h3>
-            <p>
-                Gandalf, the Grey Wizard, initiated Thorin’s quest, selecting Bilbo as the Company’s burglar. He saved
-                the group from Trolls and Goblins, wielding Glamdring. Gandalf’s wisdom guided Thorin’s Company through
-                many perils to Erebor.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg" alt="Gandalf Character Image">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="https://static.wikia.nocookie.net/lotr/images/b/b6/The_Hobbit_wallpaper_48.jpg" alt="Bilbo Baggins Character Image">
-        </div>
-        <div class="col-md-7">
-            <h3>Bilbo Baggins</h3>
-            <p>
-                Bilbo, a Hobbit of Bag End, was reluctantly recruited as the burglar for Thorin's quest. Using his wit,
-                he outsmarted Trolls, escaped Goblins, and retrieved the Arkenstone. Bilbo’s courage was crucial in
-                reclaiming Erebor, though he ultimately returned to the Shire.
-            </p>
-        </div>
-    </div>
+    {% endfor %}
 
 {% endblock %}
